@@ -15,4 +15,10 @@ class system::dbadmins {
   mysql_user { 'zack@localhost':
     max_queries_per_hour => 1200,
   }
+
+  # Looped Alternative
+  #$standard_users = ['monica', 'brad', 'luke']
+  #$standard_users.each |$user| {
+  #  mysql_user { "${user}@localhost": }
+  #}
 }
