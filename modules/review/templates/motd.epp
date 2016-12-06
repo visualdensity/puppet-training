@@ -1,1 +1,3 @@
-This is a Welcome message on <%= $facts[fqdn] %>
+Hey <%= $review::user %>,
+
+Welcome to <%= $::fqdn %>, which is a... <% if $is_virtual { -%>VM!<% } %>
