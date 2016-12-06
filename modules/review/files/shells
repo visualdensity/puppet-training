@@ -1,0 +1,8 @@
+#Managed by Puppet ha!
+/bin/sh
+/bin/bash
+/sbin/nologin
+/bin/dash
+/bin/tcsh
+/bin/csh
+/bin/zsh
