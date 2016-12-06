@@ -20,6 +20,7 @@ class system::hashadmins {
 
     #create_resources('mysql_user', $mysql_users, $mysql_defaults)
 
+    # For more info on this, look for Advanced resources in Puppet docco
     $mysql_users.each | $name, $params | {
         mysql_user { $name:
           * => $params;
