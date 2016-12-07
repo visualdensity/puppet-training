@@ -22,11 +22,13 @@ class hosts {
       ip           => '127.0.0.1',
     }
 
+    #Here you export details to Puppet Master along with others
     @@host { $::fqdn:
       host_aliases => [$::hostname],
       ip           => $::ipaddress,
       tag          => ['classroom'],
     }
 
+    #Here, for all other details collected in Puppet Master, realize each as a host resource
     Host <<| tag == 'classroom' |>>
 }
