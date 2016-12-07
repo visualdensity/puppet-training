@@ -1,5 +1,8 @@
-class review (String $user='review') 
+class review (String[1,10] $user='review') 
 {
+    $sample = 'True' #this is a string
+    $sample_boolean = Boolean.new($sample) #how you cast it explicitly to Boolean
+
     user { $user:
          name             => $user,
          ensure           => 'present',
