@@ -22,9 +22,9 @@ class hosts {
       ip           => '127.0.0.1',
     }
 
-    @@host { 'wicked.puppetlabs.vm':
-      host_aliases => ['wicked'],
-      ip           => '10.10.10.130',
+    @@host { $::fqdn:
+      host_aliases => [$::hostname],
+      ip           => $::ipaddress,
       tag          => ['classroom'],
     }
 
