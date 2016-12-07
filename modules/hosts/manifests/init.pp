@@ -25,7 +25,7 @@ class hosts {
     @@host { 'wicked.puppetlabs.vm':
       host_aliases => ['wicked'],
       ip           => '10.10.10.130',
-      tag          => 'classroom',
+      tag          => ['classroom'],
     }
 
     Host <| tag == 'classroom' |>
